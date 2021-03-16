@@ -1,4 +1,4 @@
-import java.math.BigInteger;
+import java.util.LinkedList;
 import java.util.Scanner;
 
 /**
@@ -8,11 +8,19 @@ import java.util.Scanner;
 public class Main {
     private static void solution(){
         Scanner scanner = new Scanner(System.in);
-        BigInteger bigInteger1 = new BigInteger(scanner.next());
-        BigInteger bigInteger2 = new BigInteger(scanner.next());
-        BigInteger gcd = bigInteger1.gcd(bigInteger2);
-        BigInteger lcm = bigInteger1.multiply(bigInteger2).divide(gcd);
-        System.out.println(lcm);
+        int n = scanner.nextInt();
+        LinkedList<Integer> list = new LinkedList<>();
+        for (int i = 0; i < n; i++) {
+            int input = scanner.nextInt();
+            if (input != 0){
+                list.add(input);
+            }
+        }
+        System.out.println(list.size());
+        for (int i :
+                list) {
+            System.out.print(i+" ");
+        }
     }
     public static void main(String[] args) {
         solution();

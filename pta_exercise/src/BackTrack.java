@@ -31,8 +31,7 @@ public class BackTrack{
                                  int[] nums, boolean[] visited ){
         if (cur.size() == n) {
             res.add(new ArrayList<>(cur));
-            return;
-        }else
+        }else{
             for (int i = 0; i < n; i++) {
                 if (visited[i]) continue;
                 cur.add(nums[i]);
@@ -41,7 +40,7 @@ public class BackTrack{
                 cur.remove(cur.size() - 1);
                 visited[i] = false;
             }
-
+        }
     }
 
     public static void main(String[] args) {

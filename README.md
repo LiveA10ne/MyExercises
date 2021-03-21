@@ -1,2 +1,1 @@
-#PTA练习
-	一些练习题的代码
+## exercise code
